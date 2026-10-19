@@ -1,0 +1,534 @@
+/* Outlook Reader UI - Styles */
+
+/* Email Viewer */
+.email-viewer {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.email-viewer--light {
+  background: #ffffff;
+  color: #1e293b;
+}
+
+.email-viewer--dark {
+  background: #18181b;
+  color: #f4f4f5;
+}
+
+/* Header */
+.email-viewer__header {
+  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
+  padding: 1.5rem;
+}
+
+.email-viewer__header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.email-viewer__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.email-viewer__subject {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.4;
+}
+
+/* Sender */
+.email-viewer__sender {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+.email-viewer--light .email-viewer__sender {
+  background: #f8fafc;
+}
+
+.email-viewer--dark .email-viewer__sender {
+  background: #27272a;
+}
+
+.email-viewer__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.email-viewer__sender-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.email-viewer__sender-name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.email-viewer__sender-name-text {
+  font-weight: 600;
+}
+
+.email-viewer__sender-email {
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+
+.email-viewer__recipient {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.email-viewer__recipient-label {
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.email-viewer__recipient-value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.email-viewer__date {
+  font-size: 0.875rem;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+/* Attachments */
+.email-viewer__attachments {
+  padding: 0.75rem 1.5rem;
+  border-top: 1px solid;
+}
+
+.email-viewer--light .email-viewer__attachments {
+  background: #fef3c7;
+  border-color: #fcd34d;
+}
+
+.email-viewer--dark .email-viewer__attachments {
+  background: rgba(251, 191, 36, 0.1);
+  border-color: rgba(251, 191, 36, 0.3);
+}
+
+.email-viewer__attachments-header {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.email-viewer--light .email-viewer__attachments-header {
+  color: #92400e;
+}
+
+.email-viewer--dark .email-viewer__attachments-header {
+  color: #fbbf24;
+}
+
+.email-viewer__attachments-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.email-viewer__attachment {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.email-viewer--light .email-viewer__attachment {
+  background: white;
+  border: 1px solid #e2e8f0;
+}
+
+.email-viewer--dark .email-viewer__attachment {
+  background: #27272a;
+  border: 1px solid #3f3f46;
+}
+
+.email-viewer__attachment:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.email-viewer__attachment-icon {
+  font-size: 1rem;
+}
+
+.email-viewer__attachment-name {
+  font-weight: 500;
+}
+
+.email-viewer__attachment-size {
+  font-size: 0.75rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.email-viewer--light .email-viewer__attachment-size {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.email-viewer--dark .email-viewer__attachment-size {
+  background: #3f3f46;
+  color: #a1a1aa;
+}
+
+.email-viewer__attachment-download {
+  padding: 0.25rem 0.5rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.email-viewer--light .email-viewer__attachment-download:hover {
+  background: #e2e8f0;
+}
+
+.email-viewer--dark .email-viewer__attachment-download:hover {
+  background: #3f3f46;
+}
+
+/* Tabs */
+.email-viewer__tabs {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.5rem 1.5rem;
+  border-bottom: 1px solid;
+}
+
+.email-viewer--light .email-viewer__tabs {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+.email-viewer--dark .email-viewer__tabs {
+  background: #27272a;
+  border-color: #3f3f46;
+}
+
+.email-viewer__tab {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.email-viewer--light .email-viewer__tab {
+  color: #64748b;
+}
+
+.email-viewer--dark .email-viewer__tab {
+  color: #a1a1aa;
+}
+
+.email-viewer__tab:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.email-viewer--dark .email-viewer__tab:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.email-viewer__tab--active {
+  background: white !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.email-viewer--light .email-viewer__tab--active {
+  color: #1e293b;
+}
+
+.email-viewer--dark .email-viewer__tab--active {
+  background: #3f3f46 !important;
+  color: #f4f4f5;
+}
+
+/* Body */
+.email-viewer__body {
+  padding: 1.5rem;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.email-viewer__content {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.email-viewer__plain-text {
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.email-viewer__source {
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.email-viewer--light .email-viewer__source {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.email-viewer--dark .email-viewer__source {
+  background: #27272a;
+  color: #a1a1aa;
+}
+
+/* Empty State */
+.email-viewer__empty {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.email-viewer__empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.email-viewer__empty-text {
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+}
+
+.email-viewer__empty-subtext {
+  font-size: 0.875rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* Email Content Styles - Preserve original email styling */
+.email-content {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  /* Tailwind CSS variables used in some HTML emails */
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+}
+
+.email-content a {
+  color: #2563eb;
+}
+
+.email-content a:hover {
+  text-decoration: underline;
+}
+
+/* Images should be responsive but respect original sizing */
+.email-content img {
+  max-width: 100%;
+}
+
+/* Only override height if image has no height attribute */
+.email-content img:not([height]) {
+  height: auto;
+}
+
+/* Only style tables that are explicitly data tables (have border attribute) */
+.email-content table {
+  border-collapse: collapse;
+}
+
+.email-content table[border]:not([border="0"]) {
+  border: 1px solid #e2e8f0;
+}
+
+.email-content table[border]:not([border="0"]) th,
+.email-content table[border]:not([border="0"]) td {
+  border: 1px solid #e2e8f0;
+  padding: 0.5rem;
+}
+
+.email-viewer--dark .email-content table[border]:not([border="0"]) {
+  border-color: #3f3f46;
+}
+
+.email-viewer--dark .email-content table[border]:not([border="0"]) th,
+.email-viewer--dark .email-content table[border]:not([border="0"]) td {
+  border-color: #3f3f46;
+}
+
+.email-table-wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* File Upload */
+.file-upload {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 2rem;
+  border: 2px dashed;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.file-upload--light {
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  border-color: #cbd5e1;
+}
+
+.file-upload--dark {
+  background: linear-gradient(135deg, #18181b, #27272a);
+  border-color: #3f3f46;
+}
+
+.file-upload:hover {
+  border-color: #3b82f6;
+}
+
+.file-upload--dragging {
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.05);
+  transform: scale(1.02);
+}
+
+.file-upload--loading {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.file-upload__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.file-upload__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.file-upload__icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.file-upload__text {
+  text-align: center;
+}
+
+.file-upload__title {
+  margin: 0 0 0.25rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.file-upload--light .file-upload__title {
+  color: #1e293b;
+}
+
+.file-upload--dark .file-upload__title {
+  color: #f4f4f5;
+}
+
+.file-upload__subtitle {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.file-upload--light .file-upload__subtitle {
+  color: #64748b;
+}
+
+.file-upload--dark .file-upload__subtitle {
+  color: #a1a1aa;
+}
+
+.file-upload__badges {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.file-upload__badge {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 9999px;
+}
+
+.file-upload--light .file-upload__badge {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.file-upload--dark .file-upload__badge {
+  background: #3f3f46;
+  color: #a1a1aa;
+}
